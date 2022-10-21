@@ -27,7 +27,7 @@ for i in per:
       doc = open("/tmp/doc.txt","w")
       doc.write(r.text)
       doc.close()
-      s3.upload_file("/tmp/doc.txt","parcialbryangaravito","news/raw/periodico={}/year={}/month={}/day={}/{}.html".format(new_name1,ahora.year,meses[ahora.month-1],ahora.day,namenot))
+      s3.upload_file("/tmp/doc.txt","parcialbryangaravito","headlines/raw/periodico={}/year={}/month={}/day={}/{}.html".format(new_name1,ahora.year,meses[ahora.month-1],ahora.day,namenot))
       
     except:
       None
